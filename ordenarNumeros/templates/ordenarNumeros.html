@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo Javascript</title>
+        <script src="{% static 'ordenarNumeros.js' %}"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container text-center p-5">
+
+            <div class="row g-3">
+              <div class="col-md-12">
+                <p class="fs-1 fw-bold">TAREA N°3 - ORDENAR NÚMEROS</p>
+              </div>
+
+                <div class="col-md-4">
+                  <label>Número 1</label>
+                  <input type="text" class="form-control" id="N01"  required>                  
+                </div>
+                <div class="col-md-4">
+                  <label>Número 2</label>
+                  <input type="text" class="form-control"  id="N02" required>                  
+                </div>
+                <div class="col-md-4">
+                    <label>Número 3</label>
+                    <input type="text" class="form-control"  id="N03" required>                    
+                  </div>
+                  <div class="col-md-4">
+                    <label>Número 4</label>
+                    <input type="text" class="form-control" id="N04"  required>                    
+                  </div>
+                  <div class="col-md-4">
+                    <label>Número 5</label>
+                    <input type="text" class="form-control"  id="N05"  required>                    
+                  </div>
+                  <div class="col-md-4">
+                    <label>Número 6</label>
+                    <input type="text" class="form-control"    id="N06" required>                    
+                  </div>         
+                     
+                <div class="col-md-4">
+                  <label >Ordenar</label>
+                  
+                  <select class="form-select" id="selectOrdenar" aria-label="Default select example" onchange="ordenarArray(this)">
+                    <option selected></option>
+                    <option value="ASCENDENTE">ASCENDENTE</option>
+                    <option value="DESCENDENTE">DESCENDENTE</option>                    
+                  </select>
+
+
+                </div>  
+                
+                <div class="col-12">
+                  <button class="btn btn-dark" onclick="validarIngresar()">validar</button>
+                  <button class="btn btn-light" onclick="limpiar()">Limpiar</button>
+                </div>         
+            </div>    
+          
+              
+
+        </div>
+     
+    </body>
+</html>
